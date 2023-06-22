@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">QuranDiary</string>
+    <string name="get_started">Started</string>
+    <string name="start_button_description">Start Button</string>
+    <string name="background_image_description">img</string>
+    <string name="no_data">No Data.</string>
+    <string name="description">Description</string>
+    <string name="nothing">nothing</string>
+    <string name="name">Name</string>
+    <string name="class1">Class</string>
+    <string name="age">Age</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="name1">Name</string>
+    <string name="age1">Age</string>
+    <string name="para1">Para</string>
+    <string name="add_student">Add Student</string>
+    <string name="class2">Class</string>
+    <string name="add_student1">Add Student</string>
+    <string name="para2">para</string>
+    <string name="age3">Age</string>
+    <string name="clas32">class</string>
+    <string name="name3">Name</string>
+    <string name="no_data1">No Data.</string>
+</resources>
