@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="name_input" type="id" />
+    <item name="class_input" type="id" />
+    <item name="age_input" type="id" />
+    <item name="para_input" type="id" />
+    <item name="sabqi_input" type="id" />
+    <item name="manzil_input" type="id" />
+    <item name="add_button" type="id" />
+    <item name="startButton" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="empty_imageview" type="id" />
+    <item name="no_data" type="id" />
+    <item name="name_input2" type="id" />
+    <item name="class_input2" type="id" />
+    <item name="age_input2" type="id" />
+    <item name="Sabaqpara_input2" type="id" />
+    <item name="sabqi_input2" type="id" />
+    <item name="manzil_input2" type="id" />
+    <item name="update_button" type="id" />
+    <item name="delete_button" type="id" />
+    <item name="cardView" type="id" />
+    <item name="student_id_txt" type="id" />
+    <item name="student_name_txt" type="id" />
+    <item name="student_age_txt" type="id" />
+    <item name="student_class_txt" type="id" />
+    <item name="sabaq_para_txt" type="id" />
+    <item name="mainLayout" type="id" />
+    <!-- Add more resource IDs as needed -->
+</resources>
