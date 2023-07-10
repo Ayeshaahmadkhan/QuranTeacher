@@ -24,6 +24,4 @@
         android:contentDescription="@string/start_button_description"
         android:textColor="#FFFFFF" />
 
-
-
 </RelativeLayout>

@@ -1,3 +1,4 @@
+
 package com.example.qurandiary;
 
 import androidx.annotation.Nullable;
@@ -30,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextView no_data;
 
     MyDatabaseHelper myDB;
-    ArrayList<String> student_id, student_name, student_age, sabaq_para, student_class;
+    ArrayList<String> student_id, student_name, student_age, sabaq_para, student_class, sabqi, manzil;
     CustomAdapter customAdapter;
     Context context;
 
@@ -59,9 +60,11 @@ public class MainActivity2 extends AppCompatActivity {
         student_age = new ArrayList<>();
         sabaq_para = new ArrayList<>();
         student_class = new ArrayList<>();
+        sabqi = new ArrayList<>();
+        manzil = new ArrayList<>();
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(MainActivity2.this, student_id, student_name, student_age, student_class, sabaq_para);
+        customAdapter = new CustomAdapter(MainActivity2.this, student_id, student_name, student_age, student_class, sabaq_para,sabqi,manzil);
 
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));

@@ -22,4 +22,14 @@
     <string name="clas32">class</string>
     <string name="name3">Name</string>
     <string name="no_data1">No Data.</string>
+    <string name="manzil">manzil</string>
+    <string name="_1">1</string>
+    <string name="student_name">Student Name</string>
+    <string name="age22">Age</string>
+    <string name="class33">Class</string>
+    <string name="sabaq_para">Sabaq Para</string>
+    <string name="sabqi">Sabqi</string>
+    <string name="manzil1">Manzil</string>
+    <string name="sabqi22">sabqi</string>
+    <string name="sabaq11">sabaq</string>
 </resources>

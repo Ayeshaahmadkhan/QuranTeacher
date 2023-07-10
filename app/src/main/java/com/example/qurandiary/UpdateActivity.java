@@ -1,3 +1,5 @@
+
+
 package com.example.qurandiary;
 
 import androidx.appcompat.app.ActionBar;
@@ -14,14 +16,13 @@ import android.widget.Toast;
 
 public class UpdateActivity extends AppCompatActivity {
 
-    EditText name_input, class_input, age_input;
+    EditText name_input, class_input, age_input,sabqi_input, manzil_input;
     Button update_button, delete_button;
 
-    String name,id,className;
+    String name,id,className,age,para,sabqi,manzil;
 
 
-    int age;
-    int para;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,9 @@ public class UpdateActivity extends AppCompatActivity {
         age_input = findViewById(R.id.age_input2);
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
+        sabqi_input = findViewById(R.id.sabqi_input2);
+        manzil_input = findViewById(R.id.manzil_input2);
+
 
         // First, we call this
         getAndSetIntentData();
@@ -50,8 +54,8 @@ public class UpdateActivity extends AppCompatActivity {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateActivity.this);
                 name = name_input.getText().toString().trim();
                 className = class_input.getText().toString().trim(); // Remove unnecessary parsing
-                age = Integer.parseInt(age_input.getText().toString().trim());
-                myDB.updateData(id, name, age, className, para);
+                age = String.valueOf(Integer.parseInt(age_input.getText().toString().trim()));
+                myDB.updateData(id, name, age, className, para,sabqi,manzil);
                 finish();
             }
         });
@@ -73,8 +77,8 @@ public class UpdateActivity extends AppCompatActivity {
             id = String.valueOf(getIntent().getIntExtra("id", 0));
             name = getIntent().getStringExtra("name");
             className = getIntent().getStringExtra("class");
-            age = getIntent().getIntExtra("age", 0);
-            para = getIntent().getIntExtra("para", 0); // Initialize para variable
+            age = String.valueOf(getIntent().getIntExtra("age", 0));
+            para = String.valueOf(getIntent().getIntExtra("para", 0)); // Initialize para variable
 
             // Setting Intent Data
             name_input.setText(name);
@@ -109,4 +113,5 @@ public class UpdateActivity extends AppCompatActivity {
         builder.create().show();
     }
 }
+
 

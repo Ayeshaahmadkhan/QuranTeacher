@@ -1,3 +1,4 @@
+
 package com.example.qurandiary;
 
 import android.content.ContentValues;
@@ -22,6 +23,10 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_CLASS = "student_class";
     private static final String COLUMN_SABAQ_PARA = "sabaq_para";
 
+    private static final String COLUMN_SABQI = "sabqi";
+
+    private static final String COLUMN_MANZIL = "manzil";
+
 
     MyDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -33,9 +38,11 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_NAME + " TEXT, " +
-                COLUMN_AGE + " INTEGER, " +
+                COLUMN_AGE + " Text, " +
                 COLUMN_CLASS + " TEXT, " +
-                COLUMN_SABAQ_PARA + " INTEGER);";
+                COLUMN_SABAQ_PARA + " Text,"+
+                COLUMN_SABQI + " TEXT, " +
+                COLUMN_MANZIL + " TEXT);";
         db.execSQL(query);
     }
 
@@ -45,14 +52,19 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addStudent(String name, int age, String studentClass, int sabaqPara) {
+    <string> void addStudent(String name, string age, String studentClass, string sabaqPara, String sabqi, String manzil) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-
         cv.put(COLUMN_NAME, name);
-        cv.put(COLUMN_AGE, age);
+        cv.put(COLUMN_AGE, (String) age);
         cv.put(COLUMN_CLASS, studentClass);
-        cv.put(COLUMN_SABAQ_PARA, sabaqPara);
+        cv.put(COLUMN_SABAQ_PARA, (String) sabaqPara);
+        cv.put(COLUMN_SABQI, sabqi);
+        cv.put(COLUMN_MANZIL, manzil);
+
+
+
+
         long result = db.insert(TABLE_NAME, null, cv);
         if (result == -1) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
@@ -72,13 +84,15 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public void updateData(String row_id, String name, int age, String studentClass, int sabaqPara) {
+    public <string> void updateData(String row_id, String name, string age, String studentClass, string sabaqPara, string sabqi, string manzil) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_NAME, name);
-        cv.put(COLUMN_AGE, age);
+        cv.put(COLUMN_AGE, (String) age);
         cv.put(COLUMN_CLASS, studentClass);
-        cv.put(COLUMN_SABAQ_PARA, sabaqPara);
+        cv.put(COLUMN_SABAQ_PARA, (String) sabaqPara);
+        cv.put(COLUMN_SABQI, (String) sabqi);
+        cv.put(COLUMN_MANZIL, (String) manzil);
 
         long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
         if (result == -1) {
